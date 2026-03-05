@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../Business Logic/Business Logic.csproj" Id="fb9f0194-7859-402f-8be3-ab4ce630ab5b" />
+  <Project Path="../DbAccess/DbAccess.csproj" Id="d53bd3cf-71d6-4f9f-a3e7-5aa0f57c5589" />
+  <Project Path="../Uitils/Utils.csproj" Id="1e2f3040-f496-4720-b08e-95bd3e5c90a1" />
+  <Project Path="Application Layer.csproj" Id="bd21a282-f0a3-4245-95f7-0d465c35d38d" />
+</Solution>

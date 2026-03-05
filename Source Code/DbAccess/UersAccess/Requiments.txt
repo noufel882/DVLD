@@ -1,0 +1,18 @@
+﻿Main fields to handle :
+	user_id.
+	user_name.
+	user_password.
+	person_id that link with this user. 
+	is_active;
+
+
+Main Methods:
+	CRUD :
+		Create.(Done)
+		Find .
+		Update.(Done)
+		Delete.(Done)
+
+	Misc:
+		Users List. (Done)
+		IsUserExists(Name , pass).

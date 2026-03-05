@@ -1,0 +1,14 @@
+﻿
+1/ Simple Crud methods :
+=>Create						.(Done)
+=>Read by id and national NO    .(Done)
+=>Delete                        .(Done)
+=>Update                        .(Done)
+
+2/Extra methods
+=>is exist by id				.(Done)
+=>is exist by National no 		.(Done)
+=>Person list					.(Done)
+
+
+
