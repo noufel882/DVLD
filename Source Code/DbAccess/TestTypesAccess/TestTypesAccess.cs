@@ -28,7 +28,7 @@ namespace DbAccess.TestTypesAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetTestTypesList), nameof(TestTypesAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetTestTypesList), nameof(TestTypesAccess));
             }
             finally
             {
@@ -66,7 +66,7 @@ namespace DbAccess.TestTypesAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(Find), nameof(TestTypesAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(Find), nameof(TestTypesAccess));
                 isFound = false;
             }
             finally
@@ -102,7 +102,7 @@ namespace DbAccess.TestTypesAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(UpdateTestTypeInfo), nameof(TestTypesAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(UpdateTestTypeInfo), nameof(TestTypesAccess));
                 return false;
             }
             finally
@@ -141,7 +141,7 @@ namespace DbAccess.TestTypesAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(AddNewTestType), nameof(TestTypesAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(AddNewTestType), nameof(TestTypesAccess));
             }
             finally
             {

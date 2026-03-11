@@ -36,7 +36,7 @@ namespace DbAccess.TestDataAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetTestByID), nameof(TestAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetTestByID), nameof(TestAccess));
                 isFound = false;
             }
             finally
@@ -112,7 +112,7 @@ namespace DbAccess.TestDataAccess
             catch (Exception ex)
             {
                 
-                Log.LogException(ex, nameof(GetPassedTestCount), nameof(TestAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetPassedTestCount), nameof(TestAccess));
                 isFound = false;
             }
             finally
@@ -144,7 +144,7 @@ namespace DbAccess.TestDataAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetAllTests), nameof(TestAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetAllTests), nameof(TestAccess));
             }
             finally
             {
@@ -191,7 +191,7 @@ namespace DbAccess.TestDataAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(AddNewTest), nameof(TestAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(AddNewTest), nameof(TestAccess));
             }
             finally
             {
@@ -231,7 +231,7 @@ namespace DbAccess.TestDataAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(UpdateTest), nameof(TestAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(UpdateTest), nameof(TestAccess));
                 return false;
             }
             finally
@@ -272,7 +272,7 @@ namespace DbAccess.TestDataAccess
 
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetPassedTestCount), nameof(TestAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetPassedTestCount), nameof(TestAccess));
             }
 
             finally

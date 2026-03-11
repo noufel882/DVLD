@@ -33,7 +33,7 @@ namespace DbAccess.Country
             }
             catch(Exception ex)
             {
-                Log.LogException(ex, nameof(GetCountriesList), nameof(DbAccess.Country.CountryAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetCountriesList), nameof(DbAccess.Country.CountryAccess));
                 throw;
             }
             finally
@@ -72,7 +72,7 @@ namespace DbAccess.Country
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(FindCountryByCountryID), nameof(DbAccess.Country.CountryAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(FindCountryByCountryID), nameof(DbAccess.Country.CountryAccess));
                 throw;
             }
             finally
@@ -109,7 +109,7 @@ namespace DbAccess.Country
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(FindCountryByCountryName), nameof(DbAccess.Country.CountryAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(FindCountryByCountryName), nameof(DbAccess.Country.CountryAccess));
                 throw;
             }
             finally

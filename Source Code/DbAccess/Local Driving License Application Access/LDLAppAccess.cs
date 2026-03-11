@@ -32,7 +32,7 @@ namespace DbAccess.LDLApp_Access
             catch (Exception ex)
             {
 
-                Log.LogException(ex, nameof(GetLocalDrivingLicenseApplicationInfoByID), nameof(LDLAppAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetLocalDrivingLicenseApplicationInfoByID), nameof(LDLAppAccess));
                 isFound = false;
             }
             finally
@@ -67,7 +67,7 @@ namespace DbAccess.LDLApp_Access
             catch (Exception ex)
             {
 
-                Log.LogException(ex, nameof(GetLocalDrivingLicenseApplicationInfoByBaseApplicationID), nameof(LDLAppAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetLocalDrivingLicenseApplicationInfoByBaseApplicationID), nameof(LDLAppAccess));
                 isFound = false;
             }
             finally
@@ -103,7 +103,7 @@ namespace DbAccess.LDLApp_Access
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(AddNewLocalDrivingLicenseApplication), nameof(LDLAppAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(AddNewLocalDrivingLicenseApplication), nameof(LDLAppAccess));
             }
             finally
             {
@@ -134,7 +134,7 @@ namespace DbAccess.LDLApp_Access
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(UpdateLocalDrivingLicenseApplication), nameof(LDLAppAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(UpdateLocalDrivingLicenseApplication), nameof(LDLAppAccess));
                 return false;
             }
             finally
@@ -160,7 +160,7 @@ namespace DbAccess.LDLApp_Access
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(DeleteLocalDrivingLicenseApplication), nameof(LDLAppAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(DeleteLocalDrivingLicenseApplication), nameof(LDLAppAccess));
             }
             finally
             {
@@ -197,7 +197,7 @@ namespace DbAccess.LDLApp_Access
             catch (Exception ex)
             {
 
-                Log.LogException(ex, nameof(GetAllLocalDrivingLicenseApplications), nameof(LDLAppAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetAllLocalDrivingLicenseApplications), nameof(LDLAppAccess));
             }
             finally
             {
@@ -245,7 +245,7 @@ namespace DbAccess.LDLApp_Access
 
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(DoesPassTestType), nameof(LDLAppAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(DoesPassTestType), nameof(LDLAppAccess));
 
 
             }
@@ -294,7 +294,7 @@ namespace DbAccess.LDLApp_Access
 
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(DoesAttendTestType), nameof(LDLAppAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(DoesAttendTestType), nameof(LDLAppAccess));
 
 
             }
@@ -345,7 +345,7 @@ namespace DbAccess.LDLApp_Access
 
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(TotalTrialsPerTest), nameof(LDLAppAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(TotalTrialsPerTest), nameof(LDLAppAccess));
 
 
             }
@@ -396,7 +396,7 @@ namespace DbAccess.LDLApp_Access
 
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(IsThereAnActiveScheduledTest), nameof(LDLAppAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(IsThereAnActiveScheduledTest), nameof(LDLAppAccess));
 
 
             }

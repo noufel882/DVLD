@@ -28,7 +28,7 @@ namespace DbAccess.ApplicationTypesAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetTypesList), nameof(ApplicationTypesAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetTypesList), nameof(ApplicationTypesAccess));
                 throw;
             }
             finally
@@ -62,7 +62,7 @@ namespace DbAccess.ApplicationTypesAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(UpdateApplicationTypeInfo), nameof(ApplicationTypesAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(UpdateApplicationTypeInfo), nameof(ApplicationTypesAccess));
                 return false;
             }
             finally
@@ -100,7 +100,7 @@ namespace DbAccess.ApplicationTypesAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(Find), nameof(ApplicationTypesAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(Find), nameof(ApplicationTypesAccess));
                 isFound = false;
             }
             finally
@@ -137,7 +137,7 @@ namespace DbAccess.ApplicationTypesAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(AddNewApplicationType), nameof(ApplicationTypesAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(AddNewApplicationType), nameof(ApplicationTypesAccess));
             }
             finally
             {

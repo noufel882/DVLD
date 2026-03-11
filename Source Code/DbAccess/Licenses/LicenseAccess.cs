@@ -46,7 +46,7 @@ namespace DbAccess.LicenseAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetLicenseInfoByID), nameof(LicenseAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetLicenseInfoByID), nameof(LicenseAccess));
             }
             finally
             {
@@ -73,7 +73,7 @@ namespace DbAccess.LicenseAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetLicensesList), nameof(LicenseAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetLicensesList), nameof(LicenseAccess));
             }
             finally
             {
@@ -123,7 +123,7 @@ namespace DbAccess.LicenseAccess
 
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetDriverLicenses), nameof(LicenseAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetDriverLicenses), nameof(LicenseAccess));
 
             }
             finally
@@ -177,7 +177,7 @@ namespace DbAccess.LicenseAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(AddNewLicense), nameof(LicenseAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(AddNewLicense), nameof(LicenseAccess));
             }
             finally
             {
@@ -233,7 +233,7 @@ namespace DbAccess.LicenseAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(UpdateLicense), nameof(LicenseAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(UpdateLicense), nameof(LicenseAccess));
             }
             finally
             {
@@ -276,7 +276,7 @@ namespace DbAccess.LicenseAccess
 
             catch (Exception ex)
             {
-                Log.LogException(ex,nameof(GetActiveLicenseIDByPersonID),nameof(LicenseAccess),AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetActiveLicenseIDByPersonID), nameof(LicenseAccess));
 
             }
 
@@ -307,7 +307,7 @@ namespace DbAccess.LicenseAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(DeactivateLicense), nameof(LicenseAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(DeactivateLicense), nameof(LicenseAccess));
             }
             finally
             {

@@ -55,7 +55,7 @@ namespace DbAccess.UserAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex ,nameof(GetUsersList) ,nameof(DbAccess.UserAccess.UserAccess) , AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetUsersList), nameof(DbAccess.UserAccess.UserAccess));
             }
             finally
             {
@@ -86,7 +86,7 @@ namespace DbAccess.UserAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(DeleteUser), nameof(DbAccess.UserAccess.UserAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(DeleteUser), nameof(DbAccess.UserAccess.UserAccess));
             }
             finally
             {
@@ -138,7 +138,7 @@ namespace DbAccess.UserAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(AddNewUser), nameof(DbAccess.UserAccess.UserAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(AddNewUser), nameof(DbAccess.UserAccess.UserAccess));
                 
             }
             finally
@@ -181,7 +181,7 @@ namespace DbAccess.UserAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(UpdateUserInfo), nameof(DbAccess.UserAccess.UserAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(UpdateUserInfo), nameof(DbAccess.UserAccess.UserAccess));
             }
             finally
             {
@@ -222,7 +222,7 @@ namespace DbAccess.UserAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetUserInfoByUserID), nameof(DbAccess.UserAccess.UserAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetUserInfoByUserID), nameof(DbAccess.UserAccess.UserAccess));
             }
             finally
             {
@@ -267,7 +267,7 @@ namespace DbAccess.UserAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetUserInfoByPersonID), nameof(DbAccess.UserAccess.UserAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetUserInfoByPersonID), nameof(DbAccess.UserAccess.UserAccess));
             }
             finally
             {
@@ -311,7 +311,7 @@ namespace DbAccess.UserAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetUserInfoByUserName), nameof(DbAccess.UserAccess.UserAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetUserInfoByUserName), nameof(DbAccess.UserAccess.UserAccess));
             }
             finally
             {
@@ -363,7 +363,7 @@ namespace DbAccess.UserAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetUserInfoByUsernameAndPassword), nameof(DbAccess.UserAccess.UserAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetUserInfoByUsernameAndPassword), nameof(DbAccess.UserAccess.UserAccess));
             }
             finally
             {
@@ -398,7 +398,7 @@ namespace DbAccess.UserAccess
             }
             catch(Exception ex)
             {
-                Log.LogException(ex, nameof(IsUserExistsForUserName), nameof(DbAccess.UserAccess.UserAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(IsUserExistsForUserName), nameof(DbAccess.UserAccess.UserAccess));
             }
             finally
             {
@@ -433,7 +433,7 @@ namespace DbAccess.UserAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(IsUserExistsForUserID), nameof(DbAccess.UserAccess.UserAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(IsUserExistsForUserID), nameof(DbAccess.UserAccess.UserAccess));
             }
             finally
             {
@@ -468,7 +468,7 @@ namespace DbAccess.UserAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(IsUserExistsForPerson), nameof(DbAccess.UserAccess.UserAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(IsUserExistsForPerson), nameof(DbAccess.UserAccess.UserAccess));
             }
             finally
             {
@@ -506,7 +506,7 @@ namespace DbAccess.UserAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(ChangePassword), nameof(DbAccess.UserAccess.UserAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(ChangePassword), nameof(DbAccess.UserAccess.UserAccess));
             }
             finally
             {

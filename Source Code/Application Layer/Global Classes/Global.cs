@@ -1,6 +1,7 @@
-﻿using System.IO;
-using Business_Logic;
+﻿using Business_Logic;
+using Microsoft.Win32;
 using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Application_Layer.Global_Classes
@@ -11,71 +12,58 @@ namespace Application_Layer.Global_Classes
 
         public static bool SaveUsernameAndPassword(string Username, string Password)
         {
+            string keyPath = @"HKEY_CURRENT_USER\Software\DVLD\LOGIN";
+
+            string valueName = "CURRENT_USER_LOGIN_INFO";
             try
             {
-                string ProjectDirectory = Directory.GetCurrentDirectory();
-                string FullPath = Path.Combine(ProjectDirectory, "data.txt");
+                string valueData;
+                if (string.IsNullOrEmpty(Username) || string.IsNullOrEmpty(Password))
+                    return false;
 
-                if (Username.Trim() == "" && File.Exists(FullPath))
-                {
-                    File.Delete(FullPath);
-                    return true;
-                }
+                else valueData = Username + "##//##" + Password;
 
-                string UserInfo = Username.Trim() +"#//#"+ Password.Trim();
-
-                using(StreamWriter writer = new StreamWriter(FullPath))
-                {
-                    writer.Write(UserInfo);
-                    return true;
-                }
-
+                Registry.SetValue(keyPath, valueName, valueData, RegistryValueKind.String);
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show($"Error : {ex.Message}");
                 return false;
             }
 
-           
+            return true;
         }
 
-        public static bool GetStoredCredential(ref string Username , ref string Password)
+        public static bool GetStoredCredential(ref string Username, ref string Password)
         {
+            string keyPath = @"HKEY_CURRENT_USER\Software\DVLD\LOGIN";
+
+            string valueName = "CURRENT_USER_LOGIN_INFO";
             try
             {
-                string ProjectDirectory = Directory.GetCurrentDirectory();
-                string FullPath = Path.Combine(ProjectDirectory, "data.txt");
+                var valueData = Registry.GetValue(keyPath, valueName, null) as string;
 
-                if (File.Exists(FullPath))
+                if (valueData == null)
                 {
-                    using (StreamReader reader = new StreamReader(FullPath))
-                    {
-                        string Line ;
-
-                        while((Line =reader.ReadLine()) != null)
-                        {
-                            Console.WriteLine(Line);
-                            string[] LoginInfos = Line.Split(new string[]{ "#//#" } , StringSplitOptions.None);
-                            Username = LoginInfos[0];
-                            Password = LoginInfos[1];
-                        }
-                        return true;
-                    }
-
+                    return false;
                 }
-                else return false;
+
+                string[] loginInfos = valueData.Split(new string[] { "##//##" }, StringSplitOptions.None);
+
+                if (loginInfos.Length < 0)
+                {
+                    return false;
+                }
+
+                Username = loginInfos[0];
+                Password = loginInfos[1];
 
             }
-            catch(Exception ex)
+            catch
             {
-
-                MessageBox.Show($"Error : {ex.Message}");
                 return false;
             }
 
+            return true;
         }
-
-
     }
 }

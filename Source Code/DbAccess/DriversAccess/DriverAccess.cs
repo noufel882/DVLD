@@ -34,7 +34,7 @@ namespace DbAccess.DriverAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetDriverInfoByID), nameof(DriverAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetDriverInfoByID), nameof(DriverAccess));
             }
             finally
             {
@@ -69,7 +69,7 @@ namespace DbAccess.DriverAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetDriverInfoByPersonID), nameof(DriverAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetDriverInfoByPersonID), nameof(DriverAccess));
             }
             finally
             {
@@ -96,7 +96,7 @@ namespace DbAccess.DriverAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetAllDrivers), nameof(DriverAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetAllDrivers), nameof(DriverAccess));
             }
             finally
             {
@@ -131,7 +131,7 @@ namespace DbAccess.DriverAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(AddNewDriver), nameof(DriverAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(AddNewDriver), nameof(DriverAccess));
             }
             finally
             {
@@ -165,7 +165,7 @@ namespace DbAccess.DriverAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(UpdateDriver), nameof(DriverAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(UpdateDriver), nameof(DriverAccess));
             }
             finally
             {
