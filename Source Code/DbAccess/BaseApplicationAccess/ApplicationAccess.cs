@@ -25,7 +25,7 @@ namespace DbAccess.ApplicationsAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetApplicationsList), nameof(ApplicationsAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetApplicationsList), nameof(ApplicationsAccess));
             }
             finally
             {
@@ -67,7 +67,7 @@ namespace DbAccess.ApplicationsAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(AddNewApplication), nameof(ApplicationsAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(AddNewApplication), nameof(ApplicationsAccess));
             }
             finally
             {
@@ -110,7 +110,7 @@ namespace DbAccess.ApplicationsAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(UpdateApplication), nameof(ApplicationsAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(UpdateApplication), nameof(ApplicationsAccess));
             }
             finally
             {
@@ -149,7 +149,7 @@ namespace DbAccess.ApplicationsAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetApplicationInfoByID), nameof(ApplicationsAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetApplicationInfoByID), nameof(ApplicationsAccess));
             }
             finally
             {
@@ -188,7 +188,7 @@ namespace DbAccess.ApplicationsAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetApplicationInfoByPersonID), nameof(ApplicationsAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetApplicationInfoByPersonID), nameof(ApplicationsAccess));
             }
             finally
             {
@@ -214,7 +214,7 @@ namespace DbAccess.ApplicationsAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(DeleteApplication), nameof(ApplicationsAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(DeleteApplication), nameof(ApplicationsAccess));
             }
             finally
             {
@@ -244,7 +244,7 @@ namespace DbAccess.ApplicationsAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(DoesPersonHasActiveApps), nameof(ApplicationsAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(DoesPersonHasActiveApps), nameof(ApplicationsAccess));
             }
             finally
             {
@@ -284,7 +284,7 @@ namespace DbAccess.ApplicationsAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetActiveAppID), nameof(ApplicationsAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetActiveAppID), nameof(ApplicationsAccess));
             }
             finally
             {
@@ -317,7 +317,7 @@ namespace DbAccess.ApplicationsAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(UpdateApplicationStatus), nameof(ApplicationsAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(UpdateApplicationStatus), nameof(ApplicationsAccess));
             }
             finally
             {
@@ -364,7 +364,7 @@ namespace DbAccess.ApplicationsAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetActiveAppIDForLicenseClass), nameof(ApplicationsAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetActiveAppIDForLicenseClass), nameof(ApplicationsAccess));
             }
             finally
             {
@@ -397,7 +397,7 @@ namespace DbAccess.ApplicationsAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(IsApplicationExist), nameof(ApplicationsAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(IsApplicationExist), nameof(ApplicationsAccess));
                 isFound = false;
             }
             finally

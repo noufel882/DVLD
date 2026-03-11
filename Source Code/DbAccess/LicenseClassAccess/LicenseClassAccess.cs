@@ -31,7 +31,7 @@ namespace DbAccess.LicenseClassAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetAllClasses), nameof(LicenseClassAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetAllClasses), nameof(LicenseClassAccess));
             }
             finally
             {
@@ -75,7 +75,7 @@ namespace DbAccess.LicenseClassAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetLicenseClassInfoByID), nameof(LicenseClassAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetLicenseClassInfoByID), nameof(LicenseClassAccess));
                 isFound = false;
             }
             finally
@@ -120,7 +120,7 @@ namespace DbAccess.LicenseClassAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetLicenseClassInfoByClassName), nameof(LicenseClassAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetLicenseClassInfoByClassName), nameof(LicenseClassAccess));
                 isFound = false;
             }
             finally

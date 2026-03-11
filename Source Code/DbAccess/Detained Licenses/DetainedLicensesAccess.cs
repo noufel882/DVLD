@@ -42,7 +42,7 @@ namespace DbAccess.DetainedLicensesAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetDetainedLicenseInfoByID), nameof(DetainedLicensesAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetDetainedLicenseInfoByID), nameof(DetainedLicensesAccess));
             }
             finally
             {
@@ -86,7 +86,7 @@ namespace DbAccess.DetainedLicensesAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetDetainedLicenseInfoByLicenseID), nameof(DetainedLicensesAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetDetainedLicenseInfoByLicenseID), nameof(DetainedLicensesAccess));
             }
             finally
             {
@@ -113,7 +113,7 @@ namespace DbAccess.DetainedLicensesAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetDetainedLicensesList), nameof(DetainedLicensesAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetDetainedLicensesList), nameof(DetainedLicensesAccess));
             }
             finally
             {
@@ -167,7 +167,7 @@ namespace DbAccess.DetainedLicensesAccess
 
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(AddNewDetainedLicense), nameof(DetainedLicensesAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(AddNewDetainedLicense), nameof(DetainedLicensesAccess));
 
             }
 
@@ -213,7 +213,7 @@ namespace DbAccess.DetainedLicensesAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(UpdateDetainedLicense), nameof(DetainedLicensesAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(UpdateDetainedLicense), nameof(DetainedLicensesAccess));
                 return false;
             }
 
@@ -253,7 +253,7 @@ namespace DbAccess.DetainedLicensesAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(ReleaseDetainedLicense), nameof(DetainedLicensesAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(ReleaseDetainedLicense), nameof(DetainedLicensesAccess));
                 return false;
             }
 
@@ -286,7 +286,7 @@ namespace DbAccess.DetainedLicensesAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(IsLicenseDetained), nameof(DetainedLicensesAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(IsLicenseDetained), nameof(DetainedLicensesAccess));
             }
             finally
             {

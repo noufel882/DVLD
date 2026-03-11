@@ -133,7 +133,7 @@ namespace DbAccess.People
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(AddPerson), nameof(DbAccess.People.PersonAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(AddPerson), nameof(DbAccess.People.PersonAccess));
                 
             }
             finally
@@ -191,7 +191,7 @@ namespace DbAccess.People
             catch(Exception ex)
             {
                 isFound=false;
-                Log.LogException(ex, nameof(FindPersonByID), nameof(DbAccess.People.PersonAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(FindPersonByID), nameof(DbAccess.People.PersonAccess));
                 
             }
             finally
@@ -250,7 +250,7 @@ namespace DbAccess.People
             catch (Exception ex)
             {
                 isFound = false;
-                Log.LogException(ex, nameof(FindPersonByNationalNo), nameof(DbAccess.People.PersonAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(FindPersonByNationalNo), nameof(DbAccess.People.PersonAccess));
                 
             }
             finally
@@ -281,7 +281,7 @@ namespace DbAccess.People
             }
             catch(Exception ex) 
             {
-                Log.LogException(ex, nameof(DeletePerson), nameof(DbAccess.People.PersonAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(DeletePerson), nameof(DbAccess.People.PersonAccess));
             }
             finally
             {
@@ -373,7 +373,7 @@ namespace DbAccess.People
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(UpdatePerson),nameof(DbAccess.People.PersonAccess),AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(UpdatePerson), nameof(DbAccess.People.PersonAccess));
             }
             finally
             {
@@ -407,7 +407,7 @@ namespace DbAccess.People
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(IsPersonExistsByID),nameof(DbAccess.People.PersonAccess),AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(IsPersonExistsByID), nameof(DbAccess.People.PersonAccess));
                 throw;
             }
             finally
@@ -442,7 +442,7 @@ namespace DbAccess.People
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(IsPersonExistsByNationalNo),nameof(DbAccess.People.PersonAccess),AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(IsPersonExistsByNationalNo), nameof(DbAccess.People.PersonAccess));
                 
             }
             finally
@@ -503,7 +503,7 @@ namespace DbAccess.People
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(IsPersonExistsByNationalNo), nameof(DbAccess.People.PersonAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(IsPersonExistsByNationalNo), nameof(DbAccess.People.PersonAccess));
                 
             }
             finally

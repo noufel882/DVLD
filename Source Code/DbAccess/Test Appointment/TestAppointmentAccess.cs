@@ -41,7 +41,7 @@ namespace DbAccess.Tests
             catch (Exception ex)
             {
                 isFound = false;
-                Log.LogException(ex, nameof(GetTestAppointmentByID), nameof(TestAppointmentAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetTestAppointmentByID), nameof(TestAppointmentAccess));
             }
             finally
             {
@@ -88,7 +88,7 @@ namespace DbAccess.Tests
             catch (Exception ex)
             {
                 isFound = false;
-                Log.LogException(ex, nameof(GetTestAppointmentByID), nameof(TestAppointmentAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetTestAppointmentByID), nameof(TestAppointmentAccess));
             }
             finally
             {
@@ -113,7 +113,7 @@ namespace DbAccess.Tests
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetAllTestAppointments), nameof(TestAppointmentAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetAllTestAppointments), nameof(TestAppointmentAccess));
             }
             finally
             {
@@ -145,7 +145,7 @@ namespace DbAccess.Tests
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetAllTestAppointmentsPerTestType), nameof(TestAppointmentAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetAllTestAppointmentsPerTestType), nameof(TestAppointmentAccess));
             }
             finally
             {
@@ -188,7 +188,7 @@ namespace DbAccess.Tests
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(AddTestAppointment), nameof(TestAppointmentAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(AddTestAppointment), nameof(TestAppointmentAccess));
             }
             finally
             {
@@ -234,7 +234,7 @@ namespace DbAccess.Tests
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(UpdateTestAppointment), nameof(TestAppointmentAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(UpdateTestAppointment), nameof(TestAppointmentAccess));
             }
             finally
             {
@@ -270,7 +270,7 @@ namespace DbAccess.Tests
 
             catch (Exception ex)
             {
-                Log.LogException(ex , nameof(GetTestID) , nameof(TestAppointmentAccess) ,AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetTestID), nameof(TestAppointmentAccess));
 
             }
 

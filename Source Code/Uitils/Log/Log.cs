@@ -1,34 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace Utils
 {
     public class Log
     {
-        private static void LogException(string text ,string SaveLocation)
-        {
-            FileUtils.SaveTextInFile(text,SaveLocation);
-        }
-
-        public static void LogException(Exception ex, string FunctionName,string FunctionLocation, string path)
+        public static void LogException(Exception ex, string senderName, string senderLocation)
         {
             string message =
 $@"{Environment.NewLine}
 -------------------------------------------
 Date     : {DateTime.Now:dd/MM/yyyy hh:mm:ss} 
 -------------------------------------------
-sender   : {FunctionName}
-location : {FunctionLocation}
+sender   : {senderName}
+location : {senderLocation}
 Message  : {ex.Message}
 
 {Environment.NewLine}";
 
+            string soureName = "DVLD";
 
-            Utils.Log.LogException(message, path);
+            if (!EventLog.SourceExists(soureName))
+            {
+                EventLog.CreateEventSource(soureName, "Application");
+            }
+
+            EventLog.WriteEntry(soureName, message, EventLogEntryType.Error);
+
         }
+
     }
 }

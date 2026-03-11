@@ -37,7 +37,7 @@ namespace DbAccess.LicenseAccess
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetInternationalLicenseInfoByID), nameof(InternationalLicenseAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetInternationalLicenseInfoByID), nameof(InternationalLicenseAccess));
             }
             finally
             {
@@ -65,7 +65,7 @@ ORDER BY IsActive , ExpirationDate DESC";
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetAllInternationalLicenses), nameof(InternationalLicenseAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetAllInternationalLicenses), nameof(InternationalLicenseAccess));
             }
             finally
             {
@@ -111,7 +111,7 @@ ORDER BY IsActive , ExpirationDate DESC";
 
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetInternationalDrivingLicenses), nameof(LicenseAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetInternationalDrivingLicenses), nameof(LicenseAccess));
 
             }
             finally
@@ -157,7 +157,7 @@ ORDER BY IsActive , ExpirationDate DESC";
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(AddNewInternationalLicense), nameof(InternationalLicenseAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(AddNewInternationalLicense), nameof(InternationalLicenseAccess));
             }
             finally
             {
@@ -201,7 +201,7 @@ ORDER BY IsActive , ExpirationDate DESC";
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(UpdateInternationalLicense), nameof(InternationalLicenseAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(UpdateInternationalLicense), nameof(InternationalLicenseAccess));
             }
             finally
             {
@@ -233,7 +233,7 @@ ORDER BY IsActive , ExpirationDate DESC";
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(GetActiveInternationalLicenseIDByDriverID), nameof(InternationalLicenseAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(GetActiveInternationalLicenseIDByDriverID), nameof(InternationalLicenseAccess));
             }
             finally
             {
@@ -262,7 +262,7 @@ ORDER BY IsActive , ExpirationDate DESC";
             }
             catch (Exception ex)
             {
-                Log.LogException(ex, nameof(DeactivateInternationalLicense), nameof(InternationalLicenseAccess), AccessSettings.ErrorLogFile);
+                Log.LogException(ex, nameof(DeactivateInternationalLicense), nameof(InternationalLicenseAccess));
             }
             finally
             {
