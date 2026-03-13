@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="File\FileUtils.cs" />
+    <Compile Include="Cryptography\Hashing.cs" />
     <Compile Include="Image\Image.cs" />
     <Compile Include="Log\Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
