@@ -109,9 +109,9 @@
             this.label5.Location = new System.Drawing.Point(228, 575);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 16);
+            this.label5.Size = new System.Drawing.Size(94, 16);
             this.label5.TabIndex = 4;
-            this.label5.Text = "version 1.0";
+            this.label5.Text = "version 1.3.12";
             // 
             // label4
             // 

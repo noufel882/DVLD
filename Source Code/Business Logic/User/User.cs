@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using DbAccess.UserAccess;
-
-
+using static Utils.Cryptography.Hashing;
 
 namespace Business_Logic
 {
@@ -18,7 +11,7 @@ namespace Business_Logic
         public int UserID { get; set; }
         public int PersonID { get; set; }
         public string UserName { get; set; }
-        public string Password { get; set; }
+        public string Password { get; private set; }
         public bool IsActive { get; set; }        
         public Person PersonalDetails { get; set; }
         private enMode Mode { get; set; }
@@ -66,7 +59,7 @@ namespace Business_Logic
         /// <returns> True if operation succeeds ; otherwise , false . </returns>  
         private bool Add()
         {
-            this.UserID = UserAccess.AddNewUser(this.PersonID ,  this.UserName , this.Password , this.IsActive);
+            this.UserID = UserAccess.AddNewUser(this.PersonID ,  this.UserName , this.Password, this.IsActive);
             return UserID != -1;
         }
 
@@ -75,7 +68,7 @@ namespace Business_Logic
         /// <returns> Returns true if at least one record was updated; otherwise, false.  </returns>
         private bool Update()
         {
-            return UserAccess.UpdateUserInfo(this.UserID , this.PersonID , this.UserName , this.Password , this.IsActive);
+            return UserAccess.UpdateUserInfo(this.UserID , this.PersonID , this.UserName , this.IsActive);
         }
 
 
@@ -192,12 +185,24 @@ namespace Business_Logic
 
         /// <summary> Change password . </summary>
         /// <returns>True if the operation succeeds, otherwise false.</returns
-        public static bool ChangePassword(int UserID, string Password)
+        public static bool ChangePassword(int UserID, string NewPassword)
         {
-            return UserAccess.ChangePassword(UserID,Password);
+            var HashedPassword =ComputeHash_SHA256(NewPassword);
+            return UserAccess.ChangePassword(UserID, HashedPassword);
         }
 
-
+        /// <summary> Change password . </summary>
+        /// <returns>True if the operation succeeds, otherwise false.</returns
+        public bool ChangePassword(string NewPassword)
+        {
+            var HashedPassword = ComputeHash_SHA256(NewPassword);
+            if (UserAccess.ChangePassword(UserID, HashedPassword))
+            {
+                this.Password = HashedPassword;
+                return true;
+            }
+            return false;
+        }
 
     }
 }

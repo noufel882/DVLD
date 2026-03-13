@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DbAccess.Settings;
 using Utils;
 
@@ -17,7 +12,7 @@ namespace DbAccess.UserAccess
             UserID	    int	
             PersonID	int	
             UserName	nvarchar(20)	
-            Password	nvarchar(20)	
+            Password	nvarchar(64)	
             IsActive	bit	
      */
     public class UserAccess
@@ -151,7 +146,7 @@ namespace DbAccess.UserAccess
 
         /// <summary> Updates an existing user's information </summary>
         /// <returns> Returns true if at least one record was updated; otherwise, false.  </returns>
-        public static bool UpdateUserInfo(int UserID,int PersonID,string UserName, string Password, bool IsActive)
+        public static bool UpdateUserInfo(int UserID,int PersonID,string UserName, bool IsActive)
         {
             int RowsAffected = 0;
             string query = 
@@ -159,7 +154,7 @@ namespace DbAccess.UserAccess
                 UPDATE {AccessSettings.UsersTableName}
                   SET [PersonID] = @PersonID
                      ,[UserName] = @UserName
-                     ,[Password] = @Password
+
                      ,[IsActive] = @IsActive
                   WHERE UserID = @UserID
                 ";
@@ -170,7 +165,7 @@ namespace DbAccess.UserAccess
 
             command.Parameters.AddWithValue("@PersonID", PersonID);
             command.Parameters.AddWithValue("@UserName", UserName);
-            command.Parameters.AddWithValue("@Password", Password);
+          //  command.Parameters.AddWithValue("@Password", Password);
             command.Parameters.AddWithValue("@IsActive", IsActive);
             command.Parameters.AddWithValue("@UserID", UserID);
 
@@ -202,8 +197,6 @@ namespace DbAccess.UserAccess
             SqlCommand command = new SqlCommand(query, connection);
 
             command.Parameters.AddWithValue("@UserID", UserID);
-            
-
             try
             {
                 connection.Open();
@@ -246,8 +239,6 @@ namespace DbAccess.UserAccess
             SqlCommand command = new SqlCommand(query, connection);
 
             command.Parameters.AddWithValue("@PersonID", PersonID);
-
-
             try
             {
                 connection.Open();

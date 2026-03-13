@@ -62,6 +62,10 @@
       <Project>{d53bd3cf-71d6-4f9f-a3e7-5aa0f57c5589}</Project>
       <Name>DbAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Uitils\Utils.csproj">
+      <Project>{1e2f3040-f496-4720-b08e-95bd3e5c90a1}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Person\Requirements.txt" />

@@ -45,7 +45,7 @@ namespace Application_Layer.Users
                 return;
             }
             LoginInfoTabEnabled(true);
-            FillUserInfoInForm();
+            FillUserILogginInfoInForm();
             ctrlPersonCardWithFilter1.LoadPersonInfo(_user.PersonID);
             
         }
@@ -86,14 +86,16 @@ namespace Application_Layer.Users
                    
         }
 
-        private void FillUserInfoInForm()
+        private void FillUserILogginInfoInForm()
         {
             lblUserID.Text = _user.UserID.ToString();
-            txtPassword.Text = _user.Password;
             txtUserName.Text = _user.UserName;
-            txtConfirmPassword.Text = _user.Password;
             chbIsActive.Checked = _user.IsActive;
-            
+
+            txtPassword.Enabled = false;
+            txtConfirmPassword.Enabled = false;
+            llblChangePassword.Visible = true;
+
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -112,7 +114,7 @@ namespace Application_Layer.Users
 
                 if (User.IsUserExistsForPerson(PersonID))//cheack if the person with this id is already user in the system.
                 {
-                    MessageBox.Show("This person is already user in the system.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("This person is already has a user account.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 
@@ -124,7 +126,7 @@ namespace Application_Layer.Users
         private void SetUserInfoToSave()
         {        
             _user.UserName = txtUserName.Text;
-            _user.Password = txtPassword.Text;
+           
             _user.IsActive = chbIsActive.Checked;
             _user.PersonID = ctrlPersonCardWithFilter1.PersonID;
         }
@@ -237,6 +239,13 @@ namespace Application_Layer.Users
         private void frmAddEditUsers_Activated(object sender, EventArgs e)
         {
             ctrlPersonCardWithFilter1.FilterFocus();
+        }
+
+        private void llblChangePassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            frmChangePassword frm = new frmChangePassword(_UserID);
+            frm.ShowDialog();
         }
     }
 }

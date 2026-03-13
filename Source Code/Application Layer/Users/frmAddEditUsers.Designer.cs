@@ -35,6 +35,8 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.ctrlPersonCardWithFilter1 = new Application_Layer.People.Controls.ctrlPersonCardWithFilter();
             this.tabLoginInfo = new System.Windows.Forms.TabPage();
+            this.llblChangePassword = new System.Windows.Forms.LinkLabel();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtConfirmPassword = new System.Windows.Forms.MaskedTextBox();
             this.txtPassword = new System.Windows.Forms.MaskedTextBox();
             this.chbIsActive = new System.Windows.Forms.CheckBox();
@@ -65,7 +67,7 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(469, 20);
+            this.lblTitle.Location = new System.Drawing.Point(469, 9);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(66, 31);
@@ -76,11 +78,11 @@
             // 
             this.tabControl1.Controls.Add(this.tabPersonalInfo);
             this.tabControl1.Controls.Add(this.tabLoginInfo);
-            this.tabControl1.Location = new System.Drawing.Point(30, 55);
+            this.tabControl1.Location = new System.Drawing.Point(30, 39);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1158, 728);
+            this.tabControl1.Size = new System.Drawing.Size(1158, 643);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPersonalInfo
@@ -93,7 +95,7 @@
             this.tabPersonalInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tabPersonalInfo.Name = "tabPersonalInfo";
             this.tabPersonalInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPersonalInfo.Size = new System.Drawing.Size(1150, 699);
+            this.tabPersonalInfo.Size = new System.Drawing.Size(1150, 614);
             this.tabPersonalInfo.TabIndex = 0;
             this.tabPersonalInfo.Text = "Personal info";
             // 
@@ -102,7 +104,7 @@
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Image = global::Application_Layer.Properties.Resources.Next_32;
             this.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNext.Location = new System.Drawing.Point(958, 631);
+            this.btnNext.Location = new System.Drawing.Point(965, 504);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(116, 50);
@@ -126,6 +128,8 @@
             // 
             this.tabLoginInfo.BackColor = System.Drawing.SystemColors.Control;
             this.tabLoginInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabLoginInfo.Controls.Add(this.llblChangePassword);
+            this.tabLoginInfo.Controls.Add(this.label5);
             this.tabLoginInfo.Controls.Add(this.txtConfirmPassword);
             this.tabLoginInfo.Controls.Add(this.txtPassword);
             this.tabLoginInfo.Controls.Add(this.chbIsActive);
@@ -144,9 +148,33 @@
             this.tabLoginInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tabLoginInfo.Name = "tabLoginInfo";
             this.tabLoginInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.tabLoginInfo.Size = new System.Drawing.Size(1150, 699);
+            this.tabLoginInfo.Size = new System.Drawing.Size(1150, 614);
             this.tabLoginInfo.TabIndex = 1;
             this.tabLoginInfo.Text = "Login Info";
+            // 
+            // llblChangePassword
+            // 
+            this.llblChangePassword.AutoSize = true;
+            this.llblChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblChangePassword.Location = new System.Drawing.Point(902, 525);
+            this.llblChangePassword.Name = "llblChangePassword";
+            this.llblChangePassword.Size = new System.Drawing.Size(239, 25);
+            this.llblChangePassword.TabIndex = 16;
+            this.llblChangePassword.TabStop = true;
+            this.llblChangePassword.Text = "Change User Password";
+            this.llblChangePassword.Visible = false;
+            this.llblChangePassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblChangePassword_LinkClicked);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(216, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(727, 29);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "To change password , please move to change password form";
             // 
             // txtConfirmPassword
             // 
@@ -171,7 +199,7 @@
             // chbIsActive
             // 
             this.chbIsActive.AutoSize = true;
-            this.chbIsActive.Location = new System.Drawing.Point(422, 414);
+            this.chbIsActive.Location = new System.Drawing.Point(426, 401);
             this.chbIsActive.Margin = new System.Windows.Forms.Padding(4);
             this.chbIsActive.Name = "chbIsActive";
             this.chbIsActive.Size = new System.Drawing.Size(104, 24);
@@ -293,7 +321,7 @@
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = global::Application_Layer.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnClose.Location = new System.Drawing.Point(862, 790);
+            this.btnClose.Location = new System.Drawing.Point(862, 696);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(116, 50);
@@ -309,7 +337,7 @@
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Image = global::Application_Layer.Properties.Resources.Save_32;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnSave.Location = new System.Drawing.Point(1031, 790);
+            this.btnSave.Location = new System.Drawing.Point(1036, 696);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(116, 50);
@@ -327,7 +355,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1214, 852);
+            this.ClientSize = new System.Drawing.Size(1214, 765);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tabControl1);
@@ -335,6 +363,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAddEditUsers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add/Edit Users";
             this.Activated += new System.EventHandler(this.frmAddEditUsers_Activated);
             this.Load += new System.EventHandler(this.frmAddEditUsers_Load);
@@ -376,5 +405,7 @@
         private System.Windows.Forms.MaskedTextBox txtConfirmPassword;
         private System.Windows.Forms.MaskedTextBox txtPassword;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.LinkLabel llblChangePassword;
     }
 }

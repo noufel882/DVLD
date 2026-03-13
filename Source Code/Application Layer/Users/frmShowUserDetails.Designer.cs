@@ -34,9 +34,10 @@
             // 
             // ctrlUserCard1
             // 
-            this.ctrlUserCard1.Location = new System.Drawing.Point(9, 6);
+            this.ctrlUserCard1.Location = new System.Drawing.Point(11, 8);
+            this.ctrlUserCard1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ctrlUserCard1.Name = "ctrlUserCard1";
-            this.ctrlUserCard1.Size = new System.Drawing.Size(829, 492);
+            this.ctrlUserCard1.Size = new System.Drawing.Size(1036, 615);
             this.ctrlUserCard1.TabIndex = 0;
             // 
             // btnClose
@@ -44,9 +45,10 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::Application_Layer.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(718, 493);
+            this.btnClose.Location = new System.Drawing.Point(898, 616);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(89, 44);
+            this.btnClose.Size = new System.Drawing.Size(111, 55);
             this.btnClose.TabIndex = 41;
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -55,15 +57,17 @@
             // 
             // frmShowUserDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(850, 544);
+            this.ClientSize = new System.Drawing.Size(1062, 680);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlUserCard1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmShowUserDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Show Person Details";
             this.Load += new System.EventHandler(this.frmShowUserDetails_Load);
             this.ResumeLayout(false);

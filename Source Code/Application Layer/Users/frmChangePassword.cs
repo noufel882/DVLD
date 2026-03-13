@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Application_Layer.People.Controls;
 using Business_Logic;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static Utils.Cryptography.Hashing;
 
 namespace Application_Layer.Users
 {
@@ -54,17 +47,34 @@ namespace Application_Layer.Users
                 errorProvider1.SetError(txtCurrentPassword, "Please fill this Field .");
                 return;
             }
+            e.Cancel = false;
+            errorProvider1.SetError(txtCurrentPassword, null);
+        }
 
-
-            if(txtCurrentPassword.Text.Trim() != _user.Password)
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (!ValidateChildren())
             {
-                e.Cancel = true;
+                MessageBox.Show("Some fields are empty , please go to red marks and fill those fields.", "Warning" , MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (ComputeHash_SHA256(txtCurrentPassword.Text.Trim()) != _user.Password)
+            {
+                MessageBox.Show("You enter a wrong password.", "Wrong passowrd", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 errorProvider1.SetError(txtCurrentPassword, "Current Password is wrong !");
                 return;
             }
 
-            e.Cancel = false;
-            errorProvider1.SetError(txtCurrentPassword, null);
+            if ( _user.ChangePassword(txtNewPassword.Text.Trim()))
+            {
+                MessageBox.Show($"Change Password successfully for user that has ID = {_UserID}" , "Info" , MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+
+            else
+            {
+                MessageBox.Show($"Operation failed due to an unspected error . ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void txtNewPassword_Validating(object sender, CancelEventArgs e)
@@ -99,24 +109,6 @@ namespace Application_Layer.Users
             Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (!ValidateChildren())
-            {
-                MessageBox.Show("Some fields are empty , please go to red marks and fill those fields.", "Warning" , MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                return;
-            }
-
-            if ( User.ChangePassword(_UserID , txtNewPassword.Text.Trim()) )
-            {
-                MessageBox.Show($"Change Password successfully for user that has ID = {_UserID}" , "Info" , MessageBoxButtons.OK,MessageBoxIcon.Information);
-            }
-
-            else
-            {
-                MessageBox.Show($"Operation failed due to an unspected error . ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
     }
 }

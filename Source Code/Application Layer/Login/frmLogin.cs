@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using Application_Layer.Global_Classes;
 using Business_Logic;
+using static Utils.Cryptography.Hashing;
 
 namespace Application_Layer.Login
 {
@@ -35,40 +36,41 @@ namespace Application_Layer.Login
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
-        {       
-            User user = User.FindByUserNameAndPassword(txtUsername.Text ,txtPassword.Text);
+        {
 
-            if (user != null)
-            {
-                if (!user.IsActive)
-                {
-                    MessageBox.Show("This acount is unactive acount", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    return;
-                }
+            var Username = txtUsername.Text.Trim();
+            var HashedPassword = ComputeHash_SHA256(txtPassword.Text.Trim());
 
-                else
-                {
-                    if (chbRememberMe.Checked)
-                    {
-                        Global.SaveUsernameAndPassword(user.UserName , user.Password);
-                    }
-                    else
-                    {
-                        Global.SaveUsernameAndPassword("","");
-                    }
-                    Global.CurrentUser = user;
-                    EnterTheSystem();
-                }
-            }
+            User user = User.FindByUserNameAndPassword(Username, HashedPassword);
 
-            else
+            if (user == null)
             {
                 MessageBox.Show("Password or username are wrong !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
 
             }
 
+            if (!user.IsActive)
+            {
+                MessageBox.Show("This acount is unactive acount", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            if (!chbRememberMe.Checked)
+            {
+                Global.SaveUsernameAndPassword("", "");
+            }
+
+
+            Global.SaveUsernameAndPassword(user.UserName, txtPassword.Text.Trim());//save loggin information in registry
+            Global.CurrentUser = user;
+            EnterTheSystem();
 
         }
+    
+
+
+
+        
     }
 }
