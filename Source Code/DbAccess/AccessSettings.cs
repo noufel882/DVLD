@@ -1,9 +1,10 @@
-﻿
+﻿using System.Configuration;
+
 namespace DbAccess.Settings
 {
     internal class AccessSettings
     {
-        public static readonly string ConnectionString = $"Server=.;Database=DVLD;User Id=sa;Password=123456;";
+        public static readonly string ConnectionString = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
         public static readonly string ErrorLogFile = @"C:\DVLD\Log\Errors\Data_Access_Errors.txt";
    
         public static readonly string PeopleTableName = "People";
