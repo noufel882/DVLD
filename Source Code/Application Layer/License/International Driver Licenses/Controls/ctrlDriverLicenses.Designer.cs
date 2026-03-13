@@ -62,9 +62,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbDriverLicenses.Controls.Add(this.tabControl1);
             this.gbDriverLicenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDriverLicenses.Location = new System.Drawing.Point(5, 6);
+            this.gbDriverLicenses.Location = new System.Drawing.Point(6, 8);
+            this.gbDriverLicenses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbDriverLicenses.Name = "gbDriverLicenses";
-            this.gbDriverLicenses.Size = new System.Drawing.Size(924, 281);
+            this.gbDriverLicenses.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDriverLicenses.Size = new System.Drawing.Size(1155, 351);
             this.gbDriverLicenses.TabIndex = 0;
             this.gbDriverLicenses.TabStop = false;
             this.gbDriverLicenses.Text = "Driver Licenses";
@@ -73,10 +75,11 @@
             // 
             this.tabControl1.Controls.Add(this.tabLocal);
             this.tabControl1.Controls.Add(this.tabInternational);
-            this.tabControl1.Location = new System.Drawing.Point(6, 21);
+            this.tabControl1.Location = new System.Drawing.Point(8, 26);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(911, 254);
+            this.tabControl1.Size = new System.Drawing.Size(1139, 318);
             this.tabControl1.TabIndex = 0;
             // 
             // tabLocal
@@ -86,10 +89,11 @@
             this.tabLocal.Controls.Add(this.label2);
             this.tabLocal.Controls.Add(this.dgvLocalLicensesHistory);
             this.tabLocal.Controls.Add(this.label1);
-            this.tabLocal.Location = new System.Drawing.Point(4, 25);
+            this.tabLocal.Location = new System.Drawing.Point(4, 29);
+            this.tabLocal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabLocal.Name = "tabLocal";
-            this.tabLocal.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLocal.Size = new System.Drawing.Size(903, 225);
+            this.tabLocal.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabLocal.Size = new System.Drawing.Size(1131, 285);
             this.tabLocal.TabIndex = 0;
             this.tabLocal.Text = "Local";
             // 
@@ -97,9 +101,10 @@
             // 
             this.lblLocalHistoryRecord.AutoSize = true;
             this.lblLocalHistoryRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalHistoryRecord.Location = new System.Drawing.Point(91, 204);
+            this.lblLocalHistoryRecord.Location = new System.Drawing.Point(114, 255);
+            this.lblLocalHistoryRecord.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLocalHistoryRecord.Name = "lblLocalHistoryRecord";
-            this.lblLocalHistoryRecord.Size = new System.Drawing.Size(14, 13);
+            this.lblLocalHistoryRecord.Size = new System.Drawing.Size(17, 17);
             this.lblLocalHistoryRecord.TabIndex = 3;
             this.lblLocalHistoryRecord.Text = "0";
             // 
@@ -107,9 +112,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 203);
+            this.label2.Location = new System.Drawing.Point(20, 254);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.Size = new System.Drawing.Size(78, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Records :";
             // 
@@ -121,10 +127,12 @@
             this.dgvLocalLicensesHistory.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvLocalLicensesHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLocalLicensesHistory.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvLocalLicensesHistory.Location = new System.Drawing.Point(6, 31);
+            this.dgvLocalLicensesHistory.Location = new System.Drawing.Point(8, 39);
+            this.dgvLocalLicensesHistory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvLocalLicensesHistory.Name = "dgvLocalLicensesHistory";
             this.dgvLocalLicensesHistory.ReadOnly = true;
-            this.dgvLocalLicensesHistory.Size = new System.Drawing.Size(889, 156);
+            this.dgvLocalLicensesHistory.RowHeadersWidth = 51;
+            this.dgvLocalLicensesHistory.Size = new System.Drawing.Size(1111, 195);
             this.dgvLocalLicensesHistory.TabIndex = 1;
             // 
             // contextMenuStrip1
@@ -133,13 +141,13 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showLicenseINfoToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(186, 42);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(213, 42);
             // 
             // showLicenseINfoToolStripMenuItem
             // 
             this.showLicenseINfoToolStripMenuItem.Image = global::Application_Layer.Properties.Resources.License_View_32;
             this.showLicenseINfoToolStripMenuItem.Name = "showLicenseINfoToolStripMenuItem";
-            this.showLicenseINfoToolStripMenuItem.Size = new System.Drawing.Size(185, 38);
+            this.showLicenseINfoToolStripMenuItem.Size = new System.Drawing.Size(212, 38);
             this.showLicenseINfoToolStripMenuItem.Text = "Show License Info";
             this.showLicenseINfoToolStripMenuItem.Click += new System.EventHandler(this.showLicenseINfoToolStripMenuItem_Click);
             // 
@@ -147,9 +155,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 13);
+            this.label1.Location = new System.Drawing.Point(20, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 13);
+            this.label1.Size = new System.Drawing.Size(174, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Local License History :";
             // 
@@ -160,10 +169,11 @@
             this.tabInternational.Controls.Add(this.label4);
             this.tabInternational.Controls.Add(this.dgvInternationalLicenseHistory);
             this.tabInternational.Controls.Add(this.label5);
-            this.tabInternational.Location = new System.Drawing.Point(4, 25);
+            this.tabInternational.Location = new System.Drawing.Point(4, 29);
+            this.tabInternational.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabInternational.Name = "tabInternational";
-            this.tabInternational.Padding = new System.Windows.Forms.Padding(3);
-            this.tabInternational.Size = new System.Drawing.Size(903, 225);
+            this.tabInternational.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabInternational.Size = new System.Drawing.Size(1131, 285);
             this.tabInternational.TabIndex = 1;
             this.tabInternational.Text = "International";
             // 
@@ -171,9 +181,10 @@
             // 
             this.lblInternationalHistoryRecord.AutoSize = true;
             this.lblInternationalHistoryRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInternationalHistoryRecord.Location = new System.Drawing.Point(92, 205);
+            this.lblInternationalHistoryRecord.Location = new System.Drawing.Point(115, 256);
+            this.lblInternationalHistoryRecord.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInternationalHistoryRecord.Name = "lblInternationalHistoryRecord";
-            this.lblInternationalHistoryRecord.Size = new System.Drawing.Size(14, 13);
+            this.lblInternationalHistoryRecord.Size = new System.Drawing.Size(17, 17);
             this.lblInternationalHistoryRecord.TabIndex = 7;
             this.lblInternationalHistoryRecord.Text = "0";
             // 
@@ -181,9 +192,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 204);
+            this.label4.Location = new System.Drawing.Point(21, 255);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 13);
+            this.label4.Size = new System.Drawing.Size(78, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Records :";
             // 
@@ -194,19 +206,23 @@
             this.dgvInternationalLicenseHistory.AllowUserToOrderColumns = true;
             this.dgvInternationalLicenseHistory.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvInternationalLicenseHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInternationalLicenseHistory.Location = new System.Drawing.Point(6, 31);
+            this.dgvInternationalLicenseHistory.ContextMenuStrip = this.contextMenuStrip2;
+            this.dgvInternationalLicenseHistory.Location = new System.Drawing.Point(8, 39);
+            this.dgvInternationalLicenseHistory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvInternationalLicenseHistory.Name = "dgvInternationalLicenseHistory";
             this.dgvInternationalLicenseHistory.ReadOnly = true;
-            this.dgvInternationalLicenseHistory.Size = new System.Drawing.Size(891, 156);
+            this.dgvInternationalLicenseHistory.RowHeadersWidth = 51;
+            this.dgvInternationalLicenseHistory.Size = new System.Drawing.Size(1114, 195);
             this.dgvInternationalLicenseHistory.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 14);
+            this.label5.Location = new System.Drawing.Point(21, 18);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 13);
+            this.label5.Size = new System.Drawing.Size(226, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "International License History :";
             // 
@@ -216,23 +232,24 @@
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
             this.contextMenuStrip2.Name = "contextMenuStrip1";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(197, 64);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(213, 42);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Image = global::Application_Layer.Properties.Resources.License_View_32;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(196, 38);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(212, 38);
             this.toolStripMenuItem1.Text = "Show License Info";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // ctrlDriverLicenses
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.gbDriverLicenses);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ctrlDriverLicenses";
-            this.Size = new System.Drawing.Size(931, 290);
+            this.Size = new System.Drawing.Size(1164, 362);
             this.gbDriverLicenses.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabLocal.ResumeLayout(false);

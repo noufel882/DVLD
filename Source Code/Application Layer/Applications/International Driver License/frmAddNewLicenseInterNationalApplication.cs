@@ -12,11 +12,11 @@ namespace Application_Layer.Applications.International_Driver_License
     public partial class frmAddNewLicenseInterNationalApplication : Form
     {
         int _InternationalLicenseID = -1;
-
         public frmAddNewLicenseInterNationalApplication()
         {
             InitializeComponent();
         }
+
 
         private void _SetDefaultValues()
         {

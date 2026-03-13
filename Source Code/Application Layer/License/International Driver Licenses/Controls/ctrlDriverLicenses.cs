@@ -118,7 +118,7 @@ namespace Application_Layer.License.Controls
 
         private void toolStripMenuItem1_Click(object sender, System.EventArgs e)
         {
-            int LicenseID = (int)dgvLocalLicensesHistory.CurrentRow.Cells[0].Value;
+            int LicenseID = (int)dgvInternationalLicenseHistory.CurrentRow.Cells[0].Value;
             frmShowInternationalLicenseInfo frm = new frmShowInternationalLicenseInfo(LicenseID);
             frm.ShowDialog();
         }

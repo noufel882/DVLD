@@ -40,8 +40,6 @@
             this.cmsOptions = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showPersonInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.releseInternationalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.showPersonLicenseHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -154,11 +152,9 @@
             this.cmsOptions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showPersonInfoToolStripMenuItem,
             this.toolStripSeparator1,
-            this.releseInternationalToolStripMenuItem,
-            this.toolStripSeparator2,
             this.showPersonLicenseHistoryToolStripMenuItem});
             this.cmsOptions.Name = "cmsOptions";
-            this.cmsOptions.Size = new System.Drawing.Size(242, 130);
+            this.cmsOptions.Size = new System.Drawing.Size(242, 86);
             // 
             // showPersonInfoToolStripMenuItem
             // 
@@ -172,18 +168,6 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(238, 6);
-            // 
-            // releseInternationalToolStripMenuItem
-            // 
-            this.releseInternationalToolStripMenuItem.Image = global::Application_Layer.Properties.Resources.International_32;
-            this.releseInternationalToolStripMenuItem.Name = "releseInternationalToolStripMenuItem";
-            this.releseInternationalToolStripMenuItem.Size = new System.Drawing.Size(241, 38);
-            this.releseInternationalToolStripMenuItem.Text = "Relese International License";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(238, 6);
             // 
             // showPersonLicenseHistoryToolStripMenuItem
             // 
@@ -211,7 +195,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1267, 675);
+            this.ClientSize = new System.Drawing.Size(1315, 675);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtFilterValue);
@@ -248,8 +232,6 @@
         private System.Windows.Forms.ContextMenuStrip cmsOptions;
         private System.Windows.Forms.ToolStripMenuItem showPersonInfoToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem releseInternationalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showPersonLicenseHistoryToolStripMenuItem;
     }
 }

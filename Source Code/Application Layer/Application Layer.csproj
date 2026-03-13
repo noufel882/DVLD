@@ -152,10 +152,10 @@
     <Compile Include="License\International Driver Licenses\frmShowInternationalLicenseInfo.Designer.cs">
       <DependentUpon>frmShowInternationalLicenseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="License\Local Driver Licenses\Controls\ctrlDriverLicenses.cs">
+    <Compile Include="License\International Driver Licenses\Controls\ctrlDriverLicenses.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="License\Local Driver Licenses\Controls\ctrlDriverLicenses.Designer.cs">
+    <Compile Include="License\International Driver Licenses\Controls\ctrlDriverLicenses.Designer.cs">
       <DependentUpon>ctrlDriverLicenses.cs</DependentUpon>
     </Compile>
     <Compile Include="License\frmPersonLicenseHistory.cs">
@@ -361,7 +361,7 @@
     <EmbeddedResource Include="License\International Driver Licenses\frmShowInternationalLicenseInfo.resx">
       <DependentUpon>frmShowInternationalLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="License\Local Driver Licenses\Controls\ctrlDriverLicenses.resx">
+    <EmbeddedResource Include="License\International Driver Licenses\Controls\ctrlDriverLicenses.resx">
       <DependentUpon>ctrlDriverLicenses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="License\frmPersonLicenseHistory.resx">

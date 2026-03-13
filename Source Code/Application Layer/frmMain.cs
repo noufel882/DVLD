@@ -148,5 +148,11 @@ namespace Application_Layer
             frmReleaseLicense frm = new frmReleaseLicense();
             frm.ShowDialog();
         }
+
+        private void relseaseDestainedDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReleaseLicense frm = new frmReleaseLicense();
+            frm.ShowDialog();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Application_Layer.License;
+﻿using Application_Layer.Applications.International_Driver_License;
+using Application_Layer.License;
 using Application_Layer.People;
 using System;
 using System.Data;
@@ -160,6 +161,13 @@ namespace Application_Layer.Driver
             int PersonID = (int)dgvApplicationsList.CurrentRow.Cells[1].Value;
             frmPersonLicenseHistory frm = new frmPersonLicenseHistory(PersonID);          
             frm.ShowDialog();
+        }
+
+        private void releseInternationalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddNewLicenseInterNationalApplication frm = new frmAddNewLicenseInterNationalApplication();
+            frm.ShowDialog();
+            
         }
     }
 }
