@@ -36,7 +36,7 @@
             this.ctrlPersonCardWithFilter1 = new Application_Layer.People.Controls.ctrlPersonCardWithFilter();
             this.tabLoginInfo = new System.Windows.Forms.TabPage();
             this.llblChangePassword = new System.Windows.Forms.LinkLabel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblUserMessage = new System.Windows.Forms.Label();
             this.txtConfirmPassword = new System.Windows.Forms.MaskedTextBox();
             this.txtPassword = new System.Windows.Forms.MaskedTextBox();
             this.chbIsActive = new System.Windows.Forms.CheckBox();
@@ -129,7 +129,7 @@
             this.tabLoginInfo.BackColor = System.Drawing.SystemColors.Control;
             this.tabLoginInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabLoginInfo.Controls.Add(this.llblChangePassword);
-            this.tabLoginInfo.Controls.Add(this.label5);
+            this.tabLoginInfo.Controls.Add(this.lblUserMessage);
             this.tabLoginInfo.Controls.Add(this.txtConfirmPassword);
             this.tabLoginInfo.Controls.Add(this.txtPassword);
             this.tabLoginInfo.Controls.Add(this.chbIsActive);
@@ -165,16 +165,17 @@
             this.llblChangePassword.Visible = false;
             this.llblChangePassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblChangePassword_LinkClicked);
             // 
-            // label5
+            // lblUserMessage
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(216, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(727, 29);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "To change password , please move to change password form";
+            this.lblUserMessage.AutoSize = true;
+            this.lblUserMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserMessage.ForeColor = System.Drawing.Color.Red;
+            this.lblUserMessage.Location = new System.Drawing.Point(216, 16);
+            this.lblUserMessage.Name = "lblUserMessage";
+            this.lblUserMessage.Size = new System.Drawing.Size(727, 29);
+            this.lblUserMessage.TabIndex = 15;
+            this.lblUserMessage.Text = "To change password , please move to change password form";
+            this.lblUserMessage.Visible = false;
             // 
             // txtConfirmPassword
             // 
@@ -405,7 +406,7 @@
         private System.Windows.Forms.MaskedTextBox txtConfirmPassword;
         private System.Windows.Forms.MaskedTextBox txtPassword;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblUserMessage;
         private System.Windows.Forms.LinkLabel llblChangePassword;
     }
 }
